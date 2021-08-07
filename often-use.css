@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* 版心盒子设置 */
+.w {
+    width: 1200px;
+    margin: auto;
+    /* margin: 0 auto; */
+}
+/* 清除浮动的两种方式 IE6 7由于兼容性问题，不可用 after前面是否是:: 或者 : 没有影响*/
+/* .clearfix::after {
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1;
+} */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
